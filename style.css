@@ -12,6 +12,7 @@ header{
 header h1{
     font-size: 1.8rem;
     padding: 10px;
+    color: white;
 }
 .searchmain{
     display:flex;
