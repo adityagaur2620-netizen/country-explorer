@@ -38,7 +38,6 @@ header h1{
     color: rgb(66, 176, 103);
 }
 #countries{
-    
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
@@ -57,7 +56,13 @@ p{
     margin: 4px 0;
     color:white;
 }
-
+#closecard {
+  cursor: pointer;
+  background: #75c565;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
 
     
 
@@ -66,6 +71,7 @@ p{
     border-radius: 8px;
     background: rgb(60, 41, 70);
     padding: 10px;
+    cursor: pointer;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -92,5 +98,5 @@ p{
       color: white;
     }
 .pagination button.active {
-      background: #0056b3;
+      background: #75c565;
     }

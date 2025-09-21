@@ -68,7 +68,7 @@ function showDetails(country) {
 
   card.innerHTML = `
     <div class="card-content">
-      <h2 style="color:white;">${country.name}</h2>
+      <h3 style="color:white;">${country.name}</h3>
       <img src="${country.flags.png}" style="width:150px;">
       <p><b>Capital:</b>${country.capital}</p>
       <p><b>Population:</b> ${country.population.toLocaleString()}</p>
