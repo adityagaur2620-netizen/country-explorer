@@ -1,4 +1,6 @@
-
+*{
+    box-sizing: border-box;
+}
 body{
     background-color:#3b9698;
     font-family: "inter",sans-serif;
@@ -60,14 +62,12 @@ p{
     
 
 .country-card{
-    width: 90%;
     border: 1px solid #ddd;
-   border-radius: 8px;
-  background: rgb(60, 41, 70);
-  padding: 10px;
-  margin: 8px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    background: rgb(60, 41, 70);
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .country-card img {
   width: 50%;
