@@ -60,7 +60,7 @@ p{
     
 
 .country-card{
-width: 500px;
+    width: 90%;
     border: 1px solid #ddd;
    border-radius: 8px;
   background: rgb(60, 41, 70);
@@ -74,7 +74,6 @@ width: 500px;
   height: 60%;
   object-fit: cover;
   border-radius: 6px;
-  margin-top: 10px;
 }
 .country-card:hover{
     transform:scale(1.1);
