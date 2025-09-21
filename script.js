@@ -45,7 +45,7 @@ function showCountries() {
     container.appendChild(card);
   });
 }
-
+//Pagination
 function setupPagination() {
   const pagination = document.getElementById("pagination");
   pagination.innerHTML = "";
