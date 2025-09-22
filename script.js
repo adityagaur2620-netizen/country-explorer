@@ -3,7 +3,6 @@ let countries = [];
 let filteredCountries = [];
 const itemsPerPage = 6; 
 let currentPage = 1;
-let totalPages = 8;
 async function fetchCountries() {
   try {
     const response = await fetch("https://api.allorigins.win/raw?url=https://www.apicountries.com/countries");
@@ -49,7 +48,22 @@ function showCountries() {
 function setupPagination() {
   const pagination = document.getElementById("pagination");
   pagination.innerHTML = "";
+   let totalPages = Math.ceil(filteredCountries.length / itemsPerPage);
 
+  const prevBtn = document.createElement("button");
+  prevBtn.className = "prev";
+  prevBtn.innerText = "Prev";
+  prevBtn.disabled = currentPage === 1;
+  prevBtn.onclick = () => {
+    if (currentPage > 1) {
+      currentPage--;
+      showCountries();
+      setupPagination();
+    }
+  };
+
+
+  pagination.appendChild(prevBtn);
   for (let i = 1; i <= totalPages; i++) {
     const btn = document.createElement("button");
     btn.innerText = i;
@@ -61,6 +75,18 @@ function setupPagination() {
     };
     pagination.appendChild(btn);
   }
+  const nextBtn = document.createElement("button");
+  nextBtn.className = "next";
+  nextBtn.innerText = "Next";
+  nextBtn.disabled = currentPage === totalPages;
+  nextBtn.onclick = () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      showCountries();
+      setupPagination();
+    }
+    };
+  pagination.appendChild(nextBtn);
 }
 function showDetails(country) {
   const card= document.createElement("div");

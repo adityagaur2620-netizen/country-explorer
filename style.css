@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color:#3b9698;
+    background: linear-gradient(135deg, #bb0c23, #4e0f23);
     font-family: "inter",sans-serif;
     }
 header{
@@ -37,6 +37,7 @@ header h1{
     cursor: pointer;
     color: rgb(66, 176, 103);
 }
+
 #countries{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -66,7 +67,7 @@ p{
 .country-card{
     border: 1px solid #ddd;
     border-radius: 8px;
-    background: rgb(60, 41, 70);
+      background: rgb(60, 41, 70);
     padding: 10px;
     cursor: pointer;
     text-align: center;
@@ -93,6 +94,19 @@ p{
       background: #0a0b0d;
       color: white;
     }
+    .pagination button.prev,
+    .pagination button.next {
+        padding: 12px 20px;
+        font-size: 1rem;
+        background: #e6e7ef;
+        color: rgb(14, 7, 7);
+        font-weight: bold;
+}
+.pagination button.prev:hover,
+.pagination button.next:hover {
+  background: #75c565;
+  transform: scale(1.08);
+}
 .pagination button.active {
       background: #75c565;
     }
