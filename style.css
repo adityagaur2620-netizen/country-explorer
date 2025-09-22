@@ -58,14 +58,11 @@ p{
 }
 #closecard {
   cursor: pointer;
-  background: #75c565;
+  background: #61bc4f;
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
 }
-
-    
-
 .country-card{
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -84,7 +81,6 @@ p{
 .country-card:hover{
     transform:scale(1.1);
 }
-
 .pagination {
       margin-top: 20px;
       text-align: center;
