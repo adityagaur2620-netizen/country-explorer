@@ -1,7 +1,7 @@
 
 let countries = [];
 let filteredCountries = [];
-const itemsPerPage = 6; 
+const itemsPerPage = 9; 
 let currentPage = 1;
 async function fetchCountries() {
   try {
@@ -35,13 +35,10 @@ function showCountries() {
 
     const name = document.createElement("h3");
     name.innerText = country.name;
-
     card.appendChild(flag);
     card.appendChild(name);
 
     card.addEventListener("click", () => showDetails(country));
-
-    container.appendChild(card);
   });
 }
 //Pagination
@@ -89,10 +86,8 @@ function setupPagination() {
   pagination.appendChild(nextBtn);
 }
 function showDetails(country) {
-  const card= document.createElement("div");
-  card.className = "card";
-
-  card.innerHTML = `
+  const details= document.createElement("details");
+  details.innerHTML = `
     <div class="card-content">
       <h3 style="color:white;">${country.name}</h3>
       <img src="${country.flags.png}" style="width:150px;">
@@ -106,13 +101,8 @@ function showDetails(country) {
       <button id="closecard">Close</button>
     </div>
   `;
-
-  document.body.appendChild(card);
-  document.getElementById("closecard").onclick = () => card.remove();
-  card.addEventListener("click", e => {
-    if (e.target === card) card.remove();
-  });
 }
+
 
 document.getElementById("search").addEventListener("input", e => {
   const q = e.target.value.toLowerCase();
